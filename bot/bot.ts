@@ -9,7 +9,6 @@ import { COMMANDS } from './commands';
 import * as dotenv from 'dotenv';
 import {
     davinciConverstaion,
-    imageConversation,
     startConversation,
 } from './conversations';
 import { conversations, createConversation } from '@grammyjs/conversations';
@@ -61,7 +60,6 @@ bot.use(
 
 //Inject conversations
 bot.use(conversations());
-bot.use(createConversation(imageConversation));
 bot.use(createConversation(startConversation));
 bot.use(createConversation(davinciConverstaion));
 
@@ -77,21 +75,11 @@ bot.command('help', async (ctx) => {
     ctx.reply('Help message');
 });
 
-//IMAGE COMMAND
-bot.command('image', async (ctx) => {
-    await ctx.conversation.enter('imageConversation');
-});
 
 //DAVINCI COMMAND
-
-//IMAGE COMMAND
 bot.command('davinci', async (ctx) => {
     await ctx.conversation.enter('davinciConverstaion');
 });
-
-/*bot.on('message', (ctx) => {
-    ctx.reply('<b>This</b> is <i>withHTML</i> <code>formatting</code>')
-}); */
 
 // Always exit any conversation upon /cancel
 bot.command("cancel", async (ctx) => {

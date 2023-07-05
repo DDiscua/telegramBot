@@ -2,16 +2,6 @@ import { BotContext, ConverstaionContext } from '../types';
 import { LOGGER } from '../../logger';
 import { addUser, getUserByTelegramId } from '../../mongodb/operations';
 
-const options = {
-    reply_markup: {
-        inline_keyboard: [
-            [
-                { text: 'Accept', callback_data: 'accept_challenge' },
-                { text: 'Decline', callback_data: 'decline_challenge' },
-            ],
-        ],
-    },
-};
 
 async function captcha(conversation: ConverstaionContext, ctx: BotContext) {
     if (ctx.from === undefined) return false;
