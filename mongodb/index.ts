@@ -1,0 +1,1 @@
+export { connectDb } from './connectDb';
