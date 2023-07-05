@@ -1,4 +1,4 @@
-import mongoose, { Document, ObjectId, Schema } from 'mongoose';
+import mongoose, { Document, Schema } from 'mongoose';
 
 export interface UserDoc extends Document {
     telegramUserName: string;

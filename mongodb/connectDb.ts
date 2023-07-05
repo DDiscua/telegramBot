@@ -12,8 +12,6 @@ const HOST = process.env.MONGO_DB_HOST || 'localhost';
 
 const dbUrl = `${DB}${USER}:${PASSWORD}@${HOST}/${DB_NAME}`;
 
-console.log('DBURL', dbUrl);
-
 const connectDb = async () => {
     try {
         mongoose.set('strictQuery', false);
