@@ -8,22 +8,6 @@ export const getEnv = () => {
 };
 
 export const getLogLevel = (): string => {
-    if (ENV === 'DEV') {
-        return 'debug';
-    }
-
-    if (ENV === 'PROD') {
-        return 'info';
-    }
-
-    if (ENV === 'TEST') {
-        return 'error';
-    }
-
-    if (ENV === 'STAGE') {
-        return 'warn';
-    }
-
     return process.env.LOG_LEVEL || 'info';
 };
 
