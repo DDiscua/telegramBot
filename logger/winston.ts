@@ -30,7 +30,6 @@ const { combine, timestamp, json, errors } = format;
 const errorsFormat = errors({ stack: true });
 
 const datadogTransporter = async (payload: any) => {
-
     if (ENABLE_LOGS === false) {
         return;
     }
@@ -61,7 +60,9 @@ const datadogTransporter = async (payload: any) => {
                     },
                 }
             )
-            .then((response) => { })
+            .then((response) => {
+                console.log('Response on transport success', response);
+            })
             .catch((error) => {
                 console.log('Error on transport', error);
             });

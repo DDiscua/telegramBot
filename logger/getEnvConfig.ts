@@ -36,7 +36,7 @@ export const getLogHostName = (): string => {
 };
 
 export const getEnableLogs = (): boolean => {
-    if (process.env.ENABLE_LOGS === 'true') {
+    if (process.env.DATADOG_ENABLED_LOGS === 'true') {
         return true;
     }
     return false;

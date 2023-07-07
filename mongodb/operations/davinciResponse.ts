@@ -8,10 +8,6 @@ export const addDavinciMessage = async ({
     authorId,
     text,
 }: Pick<DavinciResponseDoc, "chatId" | "author" | "authorId" | "text">): Promise<DavinciResponseDoc | null> => {
-    console.log("PAYLOAD: ", chatId,
-        author,
-        authorId,
-        text);
     try {
         const davinciMessage = new DavinciResponse({
             chatId,

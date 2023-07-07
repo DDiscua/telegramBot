@@ -13,7 +13,6 @@ const modelName = 'text-davinci-003';
 
 export const createCompletion = async (prompt: string): Promise<ChatCompletion | null | undefined> => {
 
-    let retValue = {}
     try {
         const response = await openAiClient.createCompletion({
             model: modelName,
