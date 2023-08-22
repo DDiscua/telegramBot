@@ -1,6 +1,8 @@
 # telegramBot
 Telegram bot using GrammyJS, NodeJs and mongo Atlas
 
+https://medium.com/@ddiscua/build-telegram-bot-using-nodejs-grammyjs-openai-andmongo-atlas-5816591a0efb
+
 # How to run
 
 User the following command to run the project 
